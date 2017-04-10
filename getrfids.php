@@ -7,7 +7,7 @@ require(".codez.inc");
 $time=time();
 $hash = sha1(sha1($time).sha1($secret));
 
-$out = json_decode(file_get_contents("$url?ts=$time&hs=$hash"));
+$out = json_decode(file_get_contents("$url?ts=$time&hs=$hash")); // note: $url comes from .codez.inc, which isn't under version control
 
 //print_r($out);
 
